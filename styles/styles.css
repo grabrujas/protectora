@@ -1,0 +1,225 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/*font-family: 'Climate Crisis', cursive;
+font-family: 'Dancing Script', cursive;
+font-family: 'Gloock', serif;*/
+h2{
+    font-family: 'Climate Crisis', cursive;
+    font-size: 35px;
+    text-align: center;
+    letter-spacing: 3px;
+	padding-bottom: 15px;
+}
+h3{
+	font-size: 40px;
+	color: rgb(242, 245, 86);
+	text-align: center;
+}
+.dona_texto{
+	color: black;
+	line-height: 2;
+}
+.blanco{
+    border: 2px solid black;
+    background-color: white;
+    padding: 10px;
+}
+p{
+    font-family: 'Dancing Script', cursive;
+    font-size: 26px;
+    font-weight: 600;
+    text-align: justify;
+    padding: 15px;
+    line-height: 2;
+
+}
+.link{
+	font-family: sans-serif;
+	color: black;
+	font-size: 25px;
+	padding-left: 150px;
+}
+header{
+	height: 100px; /*altura*/
+	background: #848484;
+	padding: 0 50px; /*50px a ambos lados*/
+	color: #FFFFFF;
+	display: flex; /*para el contenedor*/
+	justify-content: space-between; /*para que queden saparados*/
+	align-items: center;
+}
+.logo{
+	color: #2EFE64;
+	font-weight: 200; /*negrita*/
+}
+.menu a{
+	color: #FFFFFF;
+	text-transform: uppercase;
+	text-decoration: none;
+	padding: 0 10px; /*arriba e izq - der*/
+	transition: 0.4s;
+}
+.mostrar-menu,
+.esconder-menu{
+	font-size: 30px;
+	cursor: pointer;
+	display: none; /*agrego y quito*/
+	transition: 0.4s;
+}
+.mostrar-menu{
+	order: 1; /*para que muestre al final las 3 rayitas*/
+}
+.menu a:hover,
+.mostrar-menu:hover,
+.esconder-menu:hover{
+	color: #2EFE64;
+}
+#check{
+	display: none; /*para que no muestre la casilla 
+	de verificación*/
+}
+
+
+main{
+    /*background-color: blueviolet;*/
+    margin: 20px 15px;
+}
+header nav ul{
+	list-style-type: none;
+    
+}
+header nav ul li{
+	display: inline-block;
+}
+header nav ul li a{
+	background-color: #00BFFF;
+	display: block;
+	border-radius: 5px;
+}
+header nav ul li a:hover{
+	background-color: #F7F8E0;
+}
+#quienes-somos{
+    background-image: url(/assets/fondo1.jpg);
+    padding: 15px;
+}
+
+#adopta{
+    background-color: coral;
+    padding: 15px;
+    
+}
+#apadrina{
+    background-color: cornflowerblue;
+    padding: 15px;
+}
+
+#dona{
+    background-image: url(/assets/colabora.jpg);
+	background-position: center; /* Center the image */
+  	background-repeat: no-repeat; /* Do not repeat the image */
+ 	background-size: cover; /* Resize */
+    padding: 15px;
+	margin: 20px;
+}
+
+#contacto{
+    background-color: crimson;
+}
+.fotos{
+    background-color: blanchedalmond;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.foto{
+    /*width: 400px;*/
+    padding: 10px;
+    display: flex;
+    flex-flow: wrap;
+    align-items: center;
+    justify-content: center;
+    /*gap: 20px;*/
+}
+img{
+    width: 400px;
+    height: 400px;
+    border: 3px solid black;
+    padding: 15px 10px;
+    margin: 15px 15px;
+	clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
+}
+
+
+/*RESPONSIVE*/ /*para tablet*/
+@media(max-width: 768px){
+	/*header*/
+	.mostrar-menu,
+	.esconder-menu{
+		display: block;/*si agrandamos desaparece*/
+	}
+	.menu{
+		position: fixed;
+		width: 100%; /*que tome todo el ancho*/
+		height: 480px;
+		background: #848484;
+		/*left: 0;*/
+		right: -100%;/*para que se vea de la derecha*/
+		top: 0;
+		text-align: center;
+		padding: 100px 0px;
+		z-index: 100;/*para que no se superpongan
+		los elementos con el menú*/
+		transition: 0.8s;
+	}
+	.menu a{
+		display: block;/*aparece uno encima de otro*/
+		padding: 20px;/*para que se separen*/
+	}
+	/* la posición de la X*/
+	.esconder-menu{
+		position: absolute;
+		/*la ubicamos arriba*/
+		top: 40px;
+		right: 40px;
+	}
+	/* cuando pulse el check y todos los elementos
+	del menu aparescan o no*/
+	#check:checked ~ .menu{
+		right: 0;
+	}
+/* formatos de texto responsive*/
+	h2{
+		font-size: 25px;
+		letter-spacing: 1px;
+		padding-bottom: 5px;
+	}
+	h3{
+		font-size: 20px;
+		
+	}
+	p{
+	
+		font-size: 20px;
+		/*padding: 15px;*/
+		line-height: 1;
+	
+	}
+	.link{
+		font-size: 15px;
+		padding-left: 50px;
+	}
+
+
+
+
+
+}
+
+
